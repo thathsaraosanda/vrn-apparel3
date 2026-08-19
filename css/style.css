@@ -1822,3 +1822,185 @@ header {
         height: 260px;
     }
 }
+/* =====================================================
+        MOBILE NAVBAR
+===================================================== */
+
+/* Hide menu button on desktop */
+
+.menu-toggle {
+
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    color: #ffffff;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+        TABLET / MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+
+        width: 92%;
+
+        padding: 18px 0;
+
+    }
+
+
+    .logo a {
+
+        font-size: 26px;
+
+    }
+
+
+    /* Hide desktop navigation */
+
+    .nav-links {
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 0;
+
+        padding: 15px 0 20px;
+
+        background: rgba(0, 0, 0, 0.97);
+
+        border-top: 1px solid rgba(212,175,55,0.15);
+
+    }
+
+
+    /* Show navigation when menu is opened */
+
+    .nav-links.active {
+
+        display: flex;
+
+    }
+
+
+    .nav-links li {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+
+    .nav-links li a {
+
+        display: block;
+
+        width: 100%;
+
+        padding: 13px 20px;
+
+        font-size: 15px;
+
+    }
+
+
+    /* Show hamburger */
+
+    .menu-toggle {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        width: 45px;
+
+        height: 45px;
+
+    }
+
+
+    .menu-toggle i {
+
+        transition: 0.3s ease;
+
+    }
+
+
+    /* Hide Get Quote on small screens */
+
+    .btn-nav {
+
+        display: none;
+
+    }
+
+}
+
+
+/* =====================================================
+        SMALL PHONES
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        width: 90%;
+
+        padding: 16px 0;
+
+    }
+
+
+    .logo a {
+
+        font-size: 24px;
+
+    }
+
+
+    .menu-toggle {
+
+        font-size: 24px;
+
+        width: 42px;
+
+        height: 42px;
+
+    }
+
+
+    .nav-links li a {
+
+        padding: 12px 20px;
+
+        font-size: 14px;
+
+    }
+thathsara osanda new css cvode in the MAy website
+}
