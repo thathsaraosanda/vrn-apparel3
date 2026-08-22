@@ -831,9 +831,140 @@ header {
    SMALL PHONES (400px and below)
 ========================================================= */
 
+/* MOBILE RESPONSIVE FIX (UNDER 768px & 400px) */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px 15px !important; /* දෙපැත්තේ Border/Margin එක නැති කර අයිනටම ගත්තා */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important; /* Logo එක සහ Menu එක දෙපැත්තටම තල්ලු කරයි */
+        box-sizing: border-box !important;
+    }
+
+    .logo {
+        margin-right: auto !important;
+    }
+
+    .menu-toggle {
+        margin-left: auto !important;
+    }
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE (768px and below)
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* NAVBAR FIX - Left Side Menu Button */
+    .navbar { 
+        min-height: 70px; 
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px 15px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important; /* සියල්ල වම් පැත්තට එකතු කරයි */
+        gap: 15px !important; /* Button එකයි Logo එකයි අතර පරතරය */
+        box-sizing: border-box !important;
+    }
+
+    /* Menu Toggle Button එක මුලට ගනී (Left side) */
+    .menu-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        background: transparent;
+        border: 1px solid #D4AF37 !important;
+        border-radius: 8px;
+        color: #D4AF37 !important;
+        font-size: 20px !important;
+        cursor: pointer;
+        z-index: 10000;
+        order: 1 !important; /* පළමුවෙන්ම පෙන්වයි */
+        margin: 0 !important;
+    }
+
+    /* Logo එක Menu Button එකට පස්සෙන් පෙන්වයි */
+    .logo {
+        order: 2 !important; /* දෙවැනියට පෙන්වයි */
+        margin: 0 !important;
+    }
+
+    .logo a { 
+        font-size: 22px !important; 
+    }
+
+    .menu-toggle i {
+        color: #D4AF37 !important;
+        font-size: 20px !important;
+        display: block !important;
+    }
+
+    .btn-nav { display: none !important; }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        background: rgba(10, 10, 10, 0.98);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+
+    .nav-links.active { display: flex !important; }
+
+    .nav-links li { width: 100%; text-align: center; }
+
+    .nav-links li a {
+        display: block;
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    /* HERO */
+    .hero { min-height: 100svh; padding: 120px 20px 80px; }
+    .hero h3 { font-size: 14px; }
+    .hero h1 { font-size: clamp(34px, 10vw, 48px); }
+    .hero p { font-size: 14px; line-height: 1.7; }
+    .hero-buttons { flex-direction: column; width: 100%; max-width: 300px; margin: auto; }
+    .btn-primary, .btn-secondary { width: 100%; }
+
+    /* SECTIONS */
+    .about-section, .services-section, .gallery-section, .contact-section { padding: 80px 5%; }
+    .about-image, .about-image-box { min-height: 390px; }
+    .about-logo { width: 190px; }
+    .about-badge { width: 110px; right: -5px; bottom: 20px; }
+    .about-badge strong { font-size: 15px; }
+    .about-badge span { font-size: 11px; }
+    .about-content h2 { font-size: 34px; }
+    .about-features, .contact-box-grid, .services-grid, .gallery-grid { grid-template-columns: 1fr; }
+    .service-card { min-height: auto; }
+    .gallery-item { height: 300px; }
+    .contact-info-panel { padding: 25px; }
+    .contact-map, .map-placeholder { min-height: 380px; }
+
+    /* FOOTER & WHATSAPP */
+    .footer { padding-top: 50px; }
+    .footer-container { grid-template-columns: 1fr; padding: 0 5% 40px; gap: 35px; }
+    .footer-bottom { padding: 20px 5%; flex-direction: column; text-align: center; }
+    .floating-whatsapp { right: 15px; bottom: 15px; }
+}
+
 @media (max-width: 400px) {
-    .navbar { width: 94%; }
-    .logo a { font-size: 21px; }
+    .logo a { font-size: 19px !important; }
     .hero { padding-left: 15px; padding-right: 15px; }
     .hero h1 { font-size: 32px; }
     .hero p { font-size: 13px; }
@@ -847,6 +978,7 @@ header {
     .contact-detail { padding: 12px; }
     .gallery-item { height: 260px; }
 }
+
 /* LAPTOP / DESKTOP FIX */
 @media (min-width: 769px) {
     .nav-links {
@@ -862,4 +994,4 @@ header {
     .menu-toggle {
         display: none !important;
     }
-}
+   }
